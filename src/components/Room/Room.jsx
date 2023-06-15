@@ -5,7 +5,7 @@ export function Room() {
   const [paragraph, setCondition] = useState("The room is lit");
   const [buttonText, setButtonText] = useState("Licht aus");
 
-  const toggleLightText = () => {
+  const lightswitch = () => {
     setToggle(!toggle);
     if (toggle) {
       setCondition('The room is dark');
@@ -24,7 +24,7 @@ export function Room() {
     <div className={ toggle ? 'lit' : 'dark'}>
       <div className='room'>
       <p>{paragraph}</p>
-      <button onClick={toggleLightText}>{buttonText}</button>
+      <button onClick={lightswitch}>{buttonText}</button>
       </div>
     </div>
   );
